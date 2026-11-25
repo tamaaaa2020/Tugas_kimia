@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sistem Tabel Periodik</title>
+
+  <!-- Font: Spectral (judul) dan IBM Plex Sans (isi) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Progress bar scroll -->
+  <div id="bar"></div>
+
+  <!-- Navigasi -->
+  <nav>
+    <b>Tabel periodik</b>
+    <a href="#bab1">1 Pendahuluan</a>
+    <a href="#bab2">2 Materi</a>
+    <a href="#bab3">3 Proyek</a>
+    <a href="#bab4">4 Kuis</a>
+    <a href="#bab5">5 Kesimpulan</a>
+    <button class="tab-btn" id="theme-btn" aria-label="Ganti tema terang atau gelap">Tema</button>
+  </nav>
+
+  <main>
+
+    <!-- ===== Hero ===== -->
+    <div class="hero">
+      <h1>Sistem tabel periodik unsur</h1>
+      <p>
+        Dari triade Döbereiner sampai Hukum Periodik Modern: pelajari bagaimana 118 unsur
+        tersusun, mengapa sifatnya berpola, dan bagaimana pola itu dipakai pada chip,
+        baterai, dan layar perangkatmu.
+      </p>
+      <div class="spectrum" id="spectrum" aria-hidden="true"></div>
+      <a class="btn" href="#bab1">Mulai belajar</a>
+    </div>
+
+
+    <!-- ===== Bab 1: Pendahuluan ===== -->
+    <section id="bab1">
+      <div class="section-head"><span>Bab 1</span><h2>Pendahuluan</h2></div>
+
+      <div class="grid-2">
+        <div class="card">
+          <h4>Latar belakang</h4>
+          <p>
+            Di alam semesta ada lebih dari seratus unsur dengan sifat yang beragam. Menghafalnya
+            satu per satu tidak mungkin, jadi para ilmuwan mencari pola. Hasilnya adalah tabel
+            periodik, peta yang mengurutkan unsur berdasarkan nomor atom dan memperlihatkan
+            kemiripan sifatnya.
+          </p>
+          <p style="margin-top: 10px">
+            Bagi mahasiswa Teknik Informatika, anggap saja seperti skema database: nomor atom
+            adalah primary key, sedangkan golongan dan periode adalah kolom yang membuat sifat
+            unsur mudah di-query.
+          </p>
+        </div>
+
+        <div class="card">
+          <h4>Tujuan pembelajaran</h4>
+          <ol>
+            <li>Menjelaskan perkembangan sistem periodik dari masa ke masa.</li>
+            <li>Menentukan letak unsur dari konfigurasi elektronnya.</li>
+            <li>Menganalisis tren sifat periodik dalam periode dan golongan.</li>
+            <li>Menerapkan konsep tersebut lewat proyek berbasis masalah.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><b>118</b>unsur</div>
+        <div><b>7</b>periode</div>
+        <div><b>18</b>golongan</div>
+        <div><b>4</b>blok: s, p, d, f</div>
+      </div>
+    </section>
+
+
+    <!-- ===== Bab 2: Tentang materi ===== -->
+    <section id="bab2">
+      <div class="section-head"><span>Bab 2</span><h2>Tentang materi</h2></div>
+
+      <!-- 2.1 Sejarah (tab) -->
+      <h3 style="margin-top: 0">Sejarah perkembangan</h3>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn on">1829</button>
+          <button class="tab-btn">1864</button>
+          <button class="tab-btn">1869</button>
+          <button class="tab-btn">1913</button>
+          <button class="tab-btn">Modern</button>
+        </div>
+
+        <div class="card tab-panel on">
+          <h4>Döbereiner: triade</h4>
+          <p>Unsur dikelompokkan tiga-tiga dengan sifat mirip. Massa atom unsur tengah mendekati rata-rata dua unsur lainnya, misalnya Li–Na–K. Kelemahannya, hanya sedikit unsur yang bisa dibuat triade.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Newlands: hukum oktaf</h4>
+          <p>Unsur diurutkan menurut massa atom. Unsur ke-8 mirip dengan unsur pertama, seperti nada dalam tangga nada. Pola ini gagal untuk unsur setelah kalsium.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Mendeleev dan Meyer</h4>
+          <p>Unsur disusun menurut massa atom dan kemiripan sifat. Mendeleev sengaja menyisakan ruang kosong dan memprediksi unsur yang belum ditemukan, seperti eka-silikon yang kemudian dikenal sebagai germanium. Kelemahannya, beberapa pasangan terbalik urutannya, misalnya Te dan I.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Moseley: nomor atom</h4>
+          <p>Dari spektrum sinar-X, Moseley menunjukkan bahwa urutan yang tepat didasarkan pada nomor atom (jumlah proton), bukan massa atom. Masalah pasangan terbalik pun selesai.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Sistem periodik modern</h4>
+          <p>Hukum periodik modern menyatakan bahwa sifat unsur merupakan fungsi periodik dari nomor atomnya. Periode menunjukkan jumlah kulit, golongan menunjukkan kemiripan elektron valensi, dan blok s, p, d, f menunjukkan subkulit terakhir yang terisi.</p>
+        </div>
+      </div>
+
+      <!-- 2.2 Tabel interaktif (diisi oleh script.js) -->
+      <h3>Tabel periodik interaktif</h3>
+      <p class="muted" style="margin-top: -6px">
+        Klik unsur untuk melihat detailnya. Klik kategori atau ketik di kolom cari untuk menyaring.
+      </p>
+      <div class="legend" id="legend"></div>
+      <input id="search" type="search" placeholder="Cari simbol, nama, atau nomor atom"
+             aria-label="Cari unsur" style="width: min(100%, 340px); margin-bottom: 12px">
+      <div class="table-wrap"><div class="periodic-table" id="table"></div></div>
+      <div class="card" id="detail" style="--c: #3b4ad9"></div>
+      <p class="muted" style="font-size: 0.85rem">
+        Konfigurasi dihitung dengan aturan Aufbau. Beberapa unsur, seperti Cr dan Cu, punya
+        konfigurasi nyata yang sedikit berbeda.
+      </p>
+
+      <!-- 2.3 Sifat periodik (tab) -->
+      <h3>Sifat-sifat periodik</h3>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn on">Jari-jari atom</button>
+          <button class="tab-btn">Energi ionisasi</button>
+          <button class="tab-btn">Keelektronegatifan</button>
+          <button class="tab-btn">Afinitas elektron</button>
+          <button class="tab-btn">Sifat logam</button>
+        </div>
+
+        <div class="card tab-panel on">
+          <h4>Jari-jari atom</h4>
+          <p>Dalam satu periode (kiri ke kanan) mengecil, karena muatan inti efektif bertambah sementara jumlah kulit tetap. Dalam satu golongan (atas ke bawah) membesar, karena jumlah kulit bertambah.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Energi ionisasi</h4>
+          <p>Energi untuk melepas satu elektron terluar dari atom gas. Cenderung naik ke kanan dan turun ke bawah, sebab elektron valensi yang makin jauh dari inti lebih mudah dilepas. Gas mulia memiliki nilai tertinggi di periodenya.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Keelektronegatifan</h4>
+          <p>Kecenderungan atom menarik pasangan elektron dalam ikatan. Naik ke kanan dan turun ke bawah. Fluorin tertinggi, sebesar 3,98 pada skala Pauling.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Afinitas elektron</h4>
+          <p>Energi yang menyertai penerimaan satu elektron oleh atom gas. Umumnya makin besar ke kanan, dan halogen paling mudah menerima elektron. Gas mulia nyaris tidak menerima elektron.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Sifat logam</h4>
+          <p>Menurun dari kiri ke kanan dan meningkat dari atas ke bawah. Karena itu logam paling reaktif ada di pojok kiri bawah, sedangkan nonlogam paling reaktif ada di pojok kanan atas.</p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ===== Bab 3: Project based learning ===== -->
+    <section id="bab3">
+      <div class="section-head"><span>Bab 3</span><h2>Aktivitas project based learning</h2></div>
+
+      <div class="card">
+        <h4>Skenario masalah</h4>
+        <p>
+          Sebuah startup perangkat wearable harus menjelaskan pilihan bahannya: mengapa litium
+          dipakai untuk baterai, silikon untuk chip, tembaga untuk jalur sirkuit, dan emas untuk
+          konektor. Timmu ditugaskan menjelaskannya memakai sistem periodik.
+        </p>
+      </div>
+
+      <h3>Lima fase proyek</h3>
+      <div class="tabs">
+        <div class="tab-buttons">
+          <button class="tab-btn on">1 Orientasi</button>
+          <button class="tab-btn">2 Organisasi</button>
+          <button class="tab-btn">3 Investigasi</button>
+          <button class="tab-btn">4 Produk</button>
+          <button class="tab-btn">5 Presentasi</button>
+        </div>
+
+        <div class="card tab-panel on">
+          <h4>Orientasi masalah</h4>
+          <p>Baca skenario, pilih empat unsur kunci pada perangkat teknologi, lalu rumuskan pertanyaan: di mana letaknya, apa sifatnya, dan mengapa cocok dipakai.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Organisasi tim</h4>
+          <p>Bentuk tim 3 sampai 4 orang dengan peran peneliti data, analis sifat periodik, desainer visual, dan presenter. Susun jadwal kerja dua minggu.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Investigasi</h4>
+          <p>Cari nomor atom, konfigurasi elektron, golongan, periode, dan sifat tiap unsur (konduktivitas, reaktivitas, keelektronegatifan). Gunakan tabel interaktif di Bab 2 dan minimal tiga sumber ilmiah.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Pengembangan produk</h4>
+          <p>Buat “Kartu Unsur” digital berupa infografis atau halaman web yang memuat letak unsur, tren sifatnya, dan alasan pemakaiannya.</p>
+        </div>
+        <div class="card tab-panel">
+          <h4>Presentasi dan evaluasi</h4>
+          <p>Presentasikan selama 10 menit, jawab pertanyaan kelas, lakukan penilaian sejawat, lalu tulis refleksi tentang apa yang berubah dari pemahamanmu.</p>
+        </div>
+      </div>
+
+      <!-- Game detektif unsur (logika di script.js) -->
+      <h3>Misi lapangan: detektif unsur</h3>
+      <div class="card">
+        <p class="muted">Tebak unsur dari petunjuk letaknya. Jawab dengan simbol atau nama.</p>
+        <div class="stats" id="clues" style="margin: 14px 0 0"></div>
+        <div class="row">
+          <input id="guess-input" placeholder="Contoh: Na atau Natrium" aria-label="Jawaban">
+          <button class="btn" id="guess-btn">Tebak</button>
+          <button class="tab-btn" id="hint-btn">Petunjuk</button>
+          <button class="tab-btn" id="new-btn">Soal baru</button>
+        </div>
+        <p id="feedback" style="margin: 12px 0 0" aria-live="polite"></p>
+      </div>
+    </section>
+
+
+    <!-- ===== Bab 4: Latihan soal ===== -->
+    <section id="bab4">
+      <div class="section-head"><span>Bab 4</span><h2>Latihan 15 soal</h2></div>
+      <div class="card">
+        <div class="progress"><i id="quiz-progress"></i></div>
+        <div id="quiz"></div>
+      </div>
+    </section>
+
+
+    <!-- ===== Bab 5: Kesimpulan ===== -->
+    <section id="bab5">
+      <div class="section-head"><span>Bab 5</span><h2>Kesimpulan</h2></div>
+
+      <div class="card">
+        <ol class="summary">
+          <li>Sistem periodik modern disusun menurut nomor atom, hasil perjalanan panjang dari Döbereiner, Newlands, Mendeleev, hingga Moseley.</li>
+          <li>Periode menunjukkan jumlah kulit dan golongan menunjukkan elektron valensi, sehingga letak unsur bisa ditebak dari konfigurasi elektronnya.</li>
+          <li>Blok s, p, d, dan f menandai subkulit terakhir yang terisi oleh elektron.</li>
+          <li>Jari-jari atom, energi ionisasi, keelektronegatifan, afinitas elektron, dan sifat logam berubah secara teratur, jadi sifat unsur bisa diprediksi.</li>
+          <li>Melalui proyek, konsep ini terhubung langsung dengan teknologi sehari-hari, dari baterai litium sampai chip silikon.</li>
+        </ol>
+      </div>
+
+      <p class="muted" style="margin-top: 22px; max-width: 60ch">
+        Tabel periodik bukan daftar untuk dihafal, melainkan alat untuk bernalar. Dengan
+        mengetahui letak sebuah unsur, kamu sudah tahu banyak tentang perilakunya.
+      </p>
+      <a class="btn" href="#bab1" style="margin-top: 8px">Kembali ke atas</a>
+    </section>
+
+    <footer>
+      Materi: sistem tabel periodik. Dibuat sebagai media belajar interaktif tingkat perkuliahan.
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
